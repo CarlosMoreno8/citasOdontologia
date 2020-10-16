@@ -1,0 +1,28 @@
+{
+  "name": "citasodontologia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosMoreno8/citasOdontologia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosMoreno8/citasOdontologia/issues"
+  },
+  "homepage": "https://github.com/CarlosMoreno8/citasOdontologia#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.5"
+  }
+}
