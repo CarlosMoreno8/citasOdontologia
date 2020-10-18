@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 const AppointmentModel = require('../models/Appointment');
-const {ObjectID, ObjectId} = require('mongodb');
+
 
 const newAppointment = async (req,res) => {
 

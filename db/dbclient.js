@@ -6,8 +6,6 @@ const bcrypt = require("bcryptjs");
 
 const fs=require('fs');
 
-
-
 const showClients = (req, res) => { // Esto es un get en el que te muestra todos los clientes
      
     
@@ -62,7 +60,9 @@ const registerClient = async (req, res) => { // Esto es un post con regex (linea
     try {
 		
         const client = await new ClientModel({
-		    clientname: bodyData.clientname,
+            clientname: bodyData.clientname,
+            surname: bodyData.surname,
+            phone: bodyData.phone,
 		    email: bodyData.email,
 		    password: hashPass
         }).save();
@@ -160,8 +160,7 @@ const loginClient = async (req, res) => { // Aqui utilizamos async await, buscam
 
         if(passwordOk){
             res.send({
-                name: clienteEncontrado.clientname,
-                email: clienteEncontrado.email
+                message: "Bienvenid@"
             })
         }else{
             res.send({

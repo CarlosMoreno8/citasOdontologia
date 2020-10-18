@@ -11,6 +11,7 @@ const {deleteClient} = require('./db/dbclient');
 const {modifyClient} = require('./db/dbclient');
 const {loginClient} = require('./db/dbclient');
 
+
 //Middleware
 app.use(cors);
 app.use(express.json());
@@ -29,7 +30,8 @@ app.post('/client/login', loginClient);
 app.delete('/client/delete', deleteClient);
 app.put('/client/modify', modifyClient);
 
-//order actions
+//appointment endpoints
+
 
 //port listen
 app.listen(3000, ()=> console.log('>>>SERVER ONLINE'));

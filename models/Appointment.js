@@ -1,7 +1,6 @@
-const mongoose = require('mongoose');
-const ObjectId = mongoose.Types.ObjectId;
+/*const mongoose = require('mongoose');
 
-const AppointmentSchema = new mongoose.Schema({
+const AppointmentSchema = mongoose.Schema({
 
     date: {
         type: Date,
@@ -18,13 +17,13 @@ const AppointmentSchema = new mongoose.Schema({
     reason: {
         type: String
     }
-});
+});*/
 
-AppointmentSchema.methods.toJSON = function () {
+/*AppointmentSchema.methods.toJSON = function () {
     const appointment = this.toObject();
     delete appointment.__v;
     return appointment;
-};
+};*/
 
-const AppointmentModel = mongoose.model('appointment', AppointmentSchema);
-module.exports = AppointmentModel;
+//const AppointmentModel = mongoose.model('appointment', AppointmentSchema);
+//module.exports = AppointmentModel;
