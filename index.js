@@ -2,6 +2,7 @@
 const express=require('express');
 const app=express();
 const cors=require('./mw/cors');
+const PORT = process.env.PORT || 3000;
 
 //Modular imports
 const {showClients} = require('./db/dbclient');
@@ -34,4 +35,4 @@ app.put('/client/modify', modifyClient);
 
 
 //port listen
-app.listen(3000, ()=> console.log('>>>SERVER ONLINE'));
+app.listen(PORT, ()=> console.log('>>>SERVER ONLINE'+PORT));
