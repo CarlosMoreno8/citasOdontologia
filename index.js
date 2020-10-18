@@ -21,7 +21,7 @@ dbconnect();
 
 //ACTIONS
 
-//client actions
+//client endpoints
 app.get('/client/showAll', showClients);
 app.get('/client/id/:clientId', showClientsId);
 app.post('/client/register', registerClient);

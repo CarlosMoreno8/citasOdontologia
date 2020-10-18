@@ -6,6 +6,8 @@ const bcrypt = require("bcryptjs");
 
 const fs=require('fs');
 
+
+
 const showClients = (req, res) => { // Esto es un get en el que te muestra todos los clientes
      
     
