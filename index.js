@@ -30,6 +30,7 @@ app.post('/client/register', registerClient);
 app.post('/client/login', loginClient);
 app.delete('/client/delete', deleteClient);
 app.put('/client/modify', modifyClient);
+//app.post('client/logout', logoutClient);
 
 //appointment endpoints
 
