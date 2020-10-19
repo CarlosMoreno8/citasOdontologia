@@ -33,17 +33,29 @@ Steps to run the application 🚀
   
 All endpoints ⚫
 
-Endpoints of Clients
+Endpoints of Clients:
+
 -POST sign up
+
   -/client/signup
+  
 -GET all clients
+
   -/client/showAll
+  
 -GET client by id
+
   -/client/id/:clientId
+  
 -POST login
+
   -/client/login
+  
 -PUT modify client
+
   -/client/modify
+  
 -DELETE client
+
   -/client/delete
   
