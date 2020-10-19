@@ -98,7 +98,7 @@ const registerClient = async (req, res) => { // Esto es un post con regex (linea
 
 const deleteClient = async (req, res) => { // Esta hecho en async await y es un delete del cliente
     
-    let id = req.body.id;
+    let id = req.params.id;
 
 	ClientModel.findByIdAndDelete( // Con la funcion findByIdAndDelete, buscar por id el cliente que le pasas y lo elimina, sino eliminaria todos los clientes
 		id

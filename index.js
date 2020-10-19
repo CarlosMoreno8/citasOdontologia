@@ -28,7 +28,7 @@ app.get('/client/showAll', showClients);
 app.get('/client/id/:clientId', showClientsId);
 app.post('/client/register', registerClient);
 app.post('/client/login', loginClient);
-app.delete('/client/delete/:clientId', deleteClient);
+app.delete('/client/delete/:id', deleteClient);
 app.put('/client/modify', modifyClient);
 //app.post('client/logout', logoutClient);
 

@@ -57,4 +57,4 @@ const cancellAppointment =async (req,res) => {
 };
 
 
-module.export = {newAppointment, appointments, cancellAppointment}
+module.export = {newAppointment, appointments, cancellAppointment}*/
