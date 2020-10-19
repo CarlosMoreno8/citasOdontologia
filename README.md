@@ -24,38 +24,38 @@ Necessary dependencies 📋
 - mongoose
 
 Steps to run the application 🚀
--Download the repository
--Initialize npm and install the necessary dependencies:
-  -$ npm i
--Run the app:
-  -$ npm run start
+- Download the repository
+- Initialize npm and install the necessary dependencies:
+  - $ npm i
+- Run the app:
+  - $ npm run start
   
   
 All endpoints ⚫
 
 Endpoints of Clients:
 
--POST sign up
+- POST sign up
 
-  -/client/signup
+  - /client/signup
   
--GET all clients
+- GET all clients
 
-  -/client/showAll
+  - /client/showAll
   
--GET client by id
+- GET client by id
 
-  -/client/id/:clientId
+  - /client/id/:clientId
   
--POST login
+- POST login
 
-  -/client/login
+  - /client/login
   
--PUT modify client
+- PUT modify client
 
-  -/client/modify
+  - /client/modify
   
--DELETE client
+- DELETE client
 
-  -/client/delete
+  - /client/delete
   
