@@ -5,7 +5,7 @@ const AppointmentModel = require('../models/Appointment');
 const newAppointment = async (req,res) => {
 
     try {
-        let {date, clientId, reason} = req.body;
+        let {date, clientId, reason} = req.body.id;
 
         let appointment = await AppointmentModel.create({
             date: new Date,

@@ -106,12 +106,12 @@ const deleteClient = async (req, res) => { // Esta hecho en async await y es un 
 		
 		if (borradoExitosamente) {
 			res.send({
-				message: `Client ${borradoExitosamente.id} borrado con éxito: Cliente: ${borradoExitosamente.clientname} email: ${borradoExitosamente.email}`
+				message: `Client ${borradoExitosamente.id} borrado con éxito: Client: ${borradoExitosamente.clientname} email: ${borradoExitosamente.email}`
 			});
 		} else {
 			res.status(404);
 			res.send({
-				error: `Cliente con el id ${id} no encontrado.`
+				error: `Client con el id ${id} no encontrado.`
 			})
 		};
 		
