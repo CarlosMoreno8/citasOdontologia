@@ -1,4 +1,4 @@
-/*const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const AppointmentSchema = mongoose.Schema({
 
@@ -12,18 +12,21 @@ const AppointmentSchema = mongoose.Schema({
         enum: ['pending', 'cancelled', 'made']
     },
     clientId: {
-        type: ObjectId
+         type: Schema.Types.ObjectId, ref: 'Client' 
     },
     reason: {
         type: String
     }
-});*/
+});
 
-/*AppointmentSchema.methods.toJSON = function () {
+AppointmentSchema.methods.toJSON = function () {
     const appointment = this.toObject();
     delete appointment.__v;
     return appointment;
-};*/
+};
+MySchema.pre('find', function() {
+    this.populate('clientId');
+  });
 
-//const AppointmentModel = mongoose.model('appointment', AppointmentSchema);
-//module.exports = AppointmentModel;
+const AppointmentModel = mongoose.model('appointment', AppointmentSchema);
+module.exports = AppointmentModel;

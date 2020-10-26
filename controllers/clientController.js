@@ -183,6 +183,24 @@ try {
 
 const logoutClient = async (req, res) => {
 
+    try {
+        const client = await ClientModel.findByIdAndUpdate(req.client._id, {token:""});
+        if (!client){
+            res.status(401).send(
+                {message: 'Client already out.'}
+            )
+        }
+        else{
+            res.send(
+                {message: 'Sayonara baby.'}
+            )
+        }
+    } catch (error) {
+        res.status(400).send(
+            {message: error.message}
+        )
+        
+    }
 }
 
 module.exports = {
