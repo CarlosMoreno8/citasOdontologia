@@ -145,13 +145,13 @@ const loginClient = async (req, res) => { // Aqui utilizamos async await, buscam
     //         { email:  req.body.email}, { password: req.body.password }
     //     ]
     // })
-
+try {
     let clienteEncontrado = await ClientModel.findOne({
         email: req.body.email
     });
 
     if(!clienteEncontrado){
-        res.send({
+        res.status(400).send({
             message: "No existe el cliente"
         })
     }else{
@@ -159,16 +159,25 @@ const loginClient = async (req, res) => { // Aqui utilizamos async await, buscam
         let passwordOk = await bcrypt.compare(req.body.password, clienteEncontrado.password);
 
         if(passwordOk){
-            res.send({
-                message: "Bienvenid@"
-            })
+
+            const clientWithToken = await clienteEncontrado.generateAuthToken()
+            res.send(clientWithToken)
         }else{
-            res.send({
+            res.status(401).send({
                 message: "Credenciales incorrectas"
             })
         }
         
     }
+
+} catch (error) {
+    res.status(401).send({
+        message: error.message
+    })    
+}
+    
+
+    
 
 }
 

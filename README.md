@@ -32,7 +32,7 @@ Steps to run the application 🚀
   
   
 All endpoints ⚫
-
+```
 Endpoints of Clients:
 
 - POST sign up
@@ -58,4 +58,4 @@ Endpoints of Clients:
 - DELETE client
 
   - /client/delete
-  
+  ```

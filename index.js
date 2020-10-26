@@ -5,12 +5,12 @@ const cors=require('./mw/cors');
 const PORT = process.env.PORT || 3000;
 
 //Modular imports
-const {showClients} = require('./db/dbclient');
-const {showClientsId} = require('./db/dbclient');
-const {registerClient} = require('./db/dbclient');
-const {deleteClient} = require('./db/dbclient');
-const {modifyClient} = require('./db/dbclient');
-const {loginClient} = require('./db/dbclient');
+const {showClients} = require('./controllers/clientController');
+const {showClientsId} = require('./controllers/clientController');
+const {registerClient} = require('./controllers/clientController');
+const {deleteClient} = require('./controllers/clientController');
+const {modifyClient} = require('./controllers/clientController');
+const {loginClient} = require('./controllers/clientController');
 
 
 //Middleware
