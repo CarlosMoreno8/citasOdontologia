@@ -1,16 +1,15 @@
-/*const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const AppointmentModel = require('../models/Appointment');
 
 
 const newAppointment = async (req,res) => {
 
     try {
-        let {date, clientId, reason} = req.body.id;
 
         let appointment = await AppointmentModel.create({
-            date: new Date,
-            clientId: ObjectID(clientId),
-            reason: reason
+            date: new Date(req.body.date),
+            clientId: req.client._id,
+            reason: req.body.reason
         });
 
         res.send(appointment);
@@ -24,9 +23,9 @@ const newAppointment = async (req,res) => {
 
 const appointments = async (req,res) => {
     try {
-        let clientId = req.params.id;
+        let clientId = req.client._id;
 
-        let appointments = await AppointmentModel.find({ clientId: ObjectID(clientId) });
+        let appointments = await AppointmentModel.find({ clientId: clientId });
         res.send(appointments)
 
     } catch (error) {
@@ -57,4 +56,4 @@ const cancellAppointment =async (req,res) => {
 };
 
 
-module.export = {newAppointment, appointments, cancellAppointment}*/
+module.exports = {newAppointment, appointments, cancellAppointment}

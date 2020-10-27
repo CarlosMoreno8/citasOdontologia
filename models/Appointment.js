@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const AppointmentSchema = mongoose.Schema({
 
@@ -24,9 +25,9 @@ AppointmentSchema.methods.toJSON = function () {
     delete appointment.__v;
     return appointment;
 };
-MySchema.pre('find', function() {
+AppointmentSchema.pre('find', function() {
     this.populate('clientId');
   });
 
-const AppointmentModel = mongoose.model('appointment', AppointmentSchema);
+const AppointmentModel = mongoose.model('Appointment', AppointmentSchema);
 module.exports = AppointmentModel;

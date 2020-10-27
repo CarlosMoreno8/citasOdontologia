@@ -13,6 +13,10 @@ const {deleteClient} = require('./controllers/clientController');
 const {modifyClient} = require('./controllers/clientController');
 const {loginClient} = require('./controllers/clientController');
 const {logoutClient} = require('./controllers/clientController');
+const {newAppointment} = require('./controllers/appointmentController');
+const {appointments} = require('./controllers/appointmentController');
+const {cancellAppointment} = require('./controllers/appointmentController');
+
 
 
 //Middleware
@@ -35,6 +39,9 @@ app.put('/client/modify', modifyClient);
 app.get('/client/logout', auth, logoutClient);
 
 //appointment endpoints
+app.post('/appointment/', auth, newAppointment);
+app.get('/appointment/', auth, appointments);
+app.delete('/appointment/:id', auth, cancellAppointment);
 
 
 //port listen

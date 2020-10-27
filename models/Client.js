@@ -39,6 +39,6 @@ ClientSchema.methods.generateAuthToken = async function() {
 
 }
 
-const ClientModel = mongoose.model('client',ClientSchema);
+const ClientModel = mongoose.model('Client',ClientSchema);
 
 module.exports = ClientModel;
