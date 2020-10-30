@@ -9,7 +9,8 @@ const newAppointment = async (req,res) => {
         let appointment = await AppointmentModel.create({
             date: new Date(req.body.date),
             clientId: req.client._id,
-            reason: req.body.reason
+            reason: req.body.reason,
+            title: req.body.title
         });
 
         res.send(appointment);

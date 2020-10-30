@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 const AppointmentSchema = mongoose.Schema({
 
+    title: {
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         required: true

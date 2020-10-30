@@ -3,9 +3,11 @@ const ClientModel = require( '../models/Client.js');
 
 const auth = async(req, res, next) => {
     try {
-        const authorization =req.headers.authorization;
+        const authorization = req.headers.authorization;
+        console.log(authorization)
         if(authorization){
             const token = authorization.split(" ")[1];
+            console.log(token)
             const payload = jwt.verify(token, 'mimamamemimamucho');
             const client = await ClientModel.findById(payload._id);
             if (!client) {
